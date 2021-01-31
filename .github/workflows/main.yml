@@ -17,4 +17,6 @@ jobs:
         env:
           DOCKER_USER: ${{ secrets.DOCKER_USER }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+          HEROKU_USER: ${{ secrets.HEROKU_USER }}
+          HEROKU_PASSWORD: ${{ secrets.HEROKU_PASSWORD }}
         run: make deploy
