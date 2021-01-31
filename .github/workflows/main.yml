@@ -19,4 +19,5 @@ jobs:
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
           HEROKU_USER: ${{ secrets.HEROKU_USER }}
           HEROKU_PASSWORD: ${{ secrets.HEROKU_PASSWORD }}
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
         run: make deploy
