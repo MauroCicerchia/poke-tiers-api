@@ -1,10 +1,10 @@
-APP=tiers-api
+APP=poke-tiers-api
 COMMIT=$(shell git rev-parse HEAD)
 IMAGE=$(DOCKER_USER)/$(APP):$(COMMIT)
 
 local: build local-docker
 
-deploy: build upload-heroku
+deploy: upload-heroku
 
 push-docker: build upload-docker
 
