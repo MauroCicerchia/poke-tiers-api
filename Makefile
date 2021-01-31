@@ -19,6 +19,7 @@ upload-docker:
 	docker push $(IMAGE)
 
 upload-heroku:
+	docker login --username=$(HEROKU_USER) --password=$(HEROKU_PASSWORD) registry.heroku.com
 	heroku container:login
 	heroku container:push web --app=$(APP)
 	heroku container:release web --app=$(APP)
